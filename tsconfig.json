@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "strictPropertyInitialization": false,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "module": "commonjs",
+        "esModuleInterop": true,
+        "sourceMap": true,
+        "allowSyntheticDefaultImports": true,
+        "outDir": "dist",
+        "target": "es6",
+        "strict": true
+    },
+    "include": [
+        "src/**/*"
+    ]
+}
