@@ -1,7 +1,9 @@
 import BaseController from './controller/base.controller';
+import { TestViewController } from './controller/test.view.controller';
 
 // instanciation des controller
 const baseController = new BaseController();
+const testViewController = new TestViewController();
 
 interface Route {
     path: string;
@@ -15,4 +17,15 @@ export const routes: Array<Route> = [
         method: 'get',
         action: baseController.testConnection,
     },
+    {
+        path: '/confirmation-email',
+        method: 'post',
+        action: baseController.sendConfirmationEmail
+    }
+    ,
+    {
+        path: '/view/confirmation-email',
+        method: 'get',
+        action: testViewController.viewEmailConfirm
+    }
 ];
