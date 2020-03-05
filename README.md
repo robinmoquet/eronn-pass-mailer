@@ -2,7 +2,7 @@
 
 ### Installation
 
-Pour l'installation du projet veuillez vous référer au instruction sur (eronn-pass-docker)[https://github.com/robinmoquet/eronn-pass-docker]
+Pour l'installation du projet veuillez vous référer au instruction sur [eronn-pass-docker](https://github.com/robinmoquet/eronn-pass-docker)
 
 
 ### Utiliser smtp4dev pour les mail en phase de dev
