@@ -2,26 +2,7 @@
 
 ### Installation
 
-* Téléchargement du projet
-```
-$ git clone https://github.com/robinmoquet/eronn-pass-mailer.git
-```
-
-* Intallation des dépendance
-```
-$ npm install
-```
-
-* Lancement du projet 
-```
-$ npm run start
-```
-
-* Lance le projet en mode dev
-    * _NOTE_: Il faut au préalable avoir lancé `npm run start` la première fois pour la compilation.
-```
-$ npm run dev
-```
+Pour l'installation du projet veuillez vous référer au instruction sur (eronn-pass-docker)[https://github.com/robinmoquet/eronn-pass-docker]
 
 
 ### Utiliser smtp4dev pour les mail en phase de dev
