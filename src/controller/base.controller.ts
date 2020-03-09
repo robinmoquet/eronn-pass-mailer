@@ -4,6 +4,7 @@ import { Email } from '../models/email';
 import { MailManager } from '../services/MailManager';
 import { DEFAULT_FROM } from '../config/email';
 import { EmailParser } from '../services/EmailParser';
+import { CONFIRM_EMAIL_PATH } from '../config/params';
 
 export default class BaseController {
     testConnection(context: RouterContext) {
@@ -15,8 +16,10 @@ export default class BaseController {
     {
         const { body } = context.request;
 
+        const url = `${CONFIRM_EMAIL_PATH}/${body.keysecure}`;
+
         const email = new Email();
-        email.content =  EmailParser.getEmailContentToString('email-confirm.pug', {firstname: body.firstname, lastname: body.lastname});
+        email.content =  EmailParser.getEmailContentToString('email-confirm.pug', {firstname: body.firstname, lastname: body.lastname, url});
         email.to = `${body.firstname} <${body.email}>`;
         email.from = DEFAULT_FROM;
         email.subject = 'Confirmer votre adresse email'

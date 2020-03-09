@@ -3,9 +3,40 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Document
+        style(type='text/css').
+            body {
+                background: #1f1d26;
+                color: #e1e1e1;
+                font-family: 'Work Sans', '--apple-sytem', monospace;
+                font-size: 15px;
+                text-align: center;
+                line-height: 1.6;
+            }
+            a {
+                color: #e1e1e1;
+                text-decoration: none;
+                background: #3c8ee4;
+                padding: 10px 50px;
+                display: inline-block;
+                margin-top: 20px;
+                border-radius: 5px;
+                font-weight: bold;
+            }
+            .container {
+                max-width: 800px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 50px;
+                padding: 0 20px;
+            }
     body
 
-        h1 Bienvenu sur Eronn Pass #{firstname} #{lastname}
+        .container
+            h1 Hey, #{firstname} #{lastname} !
 
-        p Pour confirmer votre email veuillez cliquer 
-            a(href="#") ici
+            h3 Nous somme heureux de vous voir sur Eronn Pass 👍
+
+            p.
+                Merci de la confiance que vous nous témoignez, veuillez confirmer que l'email renseigné lors de votre inscription est bien le votre, en cliquant sur le bouton si dessous.
+
+            a(href=url) 👉 Confirmer mon email
