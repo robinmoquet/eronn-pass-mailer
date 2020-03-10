@@ -4,7 +4,7 @@
   "description": "Microservice pour l'envoi d'emails pour le projet Eronn Pass",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npx jest",
     "dev": "concurrently -k -n \"Typescript,Node\" -p \"[{name}]\" -c \"blue,green\" \"tsc --watch\" \"nodemon dist/index.js\"",
     "start": "tsc && node dist/index.js",
     "prettier": "prettier --config ./.prettierrc --write \"./src/**/*.ts\"",
@@ -13,6 +13,7 @@
   "author": "Robin Moquet",
   "license": "ISC",
   "devDependencies": {
+    "@types/jest": "^25.1.4",
     "@types/koa": "^2.11.2",
     "@types/koa-bodyparser": "^4.3.0",
     "@types/koa-router": "^7.4.0",
@@ -20,8 +21,10 @@
     "@types/nodemailer": "^6.4.0",
     "@types/pug": "^2.0.4",
     "concurrently": "^5.1.0",
+    "jest": "^25.1.0",
     "nodemon": "^2.0.2",
     "prettier": "^1.19.1",
+    "ts-jest": "^25.2.1",
     "typescript": "^3.8.3"
   },
   "dependencies": {
