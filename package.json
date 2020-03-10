@@ -8,7 +8,13 @@
     "dev": "concurrently -k -n \"Typescript,Node\" -p \"[{name}]\" -c \"blue,green\" \"tsc --watch\" \"nodemon dist/index.js\"",
     "start": "tsc && node dist/index.js",
     "prettier": "prettier --config ./.prettierrc --write \"./src/**/*.ts\"",
-    "build": "tsc"
+    "build": "tsc",
+    "pre-commit": "npm run prettier && npm run test"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run pre-commit"
+    }
   },
   "author": "Robin Moquet",
   "license": "ISC",
@@ -22,6 +28,7 @@
     "@types/pug": "^2.0.4",
     "concurrently": "^5.1.0",
     "coveralls": "^3.0.9",
+    "husky": "^4.2.3",
     "jest": "^25.1.0",
     "nodemon": "^2.0.2",
     "prettier": "^1.19.1",
