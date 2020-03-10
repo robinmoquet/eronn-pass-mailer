@@ -1,10 +1,9 @@
-import { Email } from "../models/email";
-import { createTransport } from "nodemailer";
-import { SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS } from "../config/smtp";
-import Mail from "nodemailer/lib/mailer";
+import { Email } from '../models/email';
+import { createTransport } from 'nodemailer';
+import { SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS } from '../config/smtp';
+import Mail from 'nodemailer/lib/mailer';
 
 export class MailManager {
-
     private static _intance: MailManager;
     private transporter: Mail;
 
@@ -15,8 +14,8 @@ export class MailManager {
             secure: false,
             auth: {
                 user: SMTP_USER,
-                pass: SMTP_PASS
-            }
+                pass: SMTP_PASS,
+            },
         });
 
         // Use it to try your connection
@@ -30,16 +29,14 @@ export class MailManager {
         //   });
     }
 
-    public static get Instance(): MailManager
-    {
+    public static get Instance(): MailManager {
         if (this._intance === undefined) {
             this._intance = new MailManager();
         }
         return this._intance;
     }
 
-    async send(email: Email): Promise<void>
-    {
+    async send(email: Email): Promise<void> {
         const message: Mail.Options = {
             from: email.from,
             to: email.to,
@@ -51,8 +48,7 @@ export class MailManager {
             const info = await this.transporter.sendMail(message);
             console.log(info);
         } catch (err) {
-             // do something with err ...
+            // do something with err ...
         }
     }
-
 }

@@ -20,12 +20,11 @@ export const routes: Array<Route> = [
     {
         path: '/confirmation-email',
         method: 'post',
-        action: baseController.sendConfirmationEmail
-    }
-    ,
+        action: baseController.sendConfirmationEmail,
+    },
     {
         path: '/view/confirmation-email',
         method: 'get',
-        action: testViewController.viewEmailConfirm
-    }
+        action: testViewController.viewEmailConfirm,
+    },
 ];
