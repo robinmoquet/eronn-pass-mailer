@@ -1,6 +1,7 @@
 # Eronn Pass Mailer
 
 [![](https://travis-ci.org/robinmoquet/eronn-pass-mailer.svg?branch=master)](https://travis-ci.org/robinmoquet/eronn-pass-mailer.svg?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/robinmoquet/eronn-pass-mailer/badge.svg?branch=master)](https://coveralls.io/github/robinmoquet/eronn-pass-mailer?branch=master)
 
 ### Installation
 
