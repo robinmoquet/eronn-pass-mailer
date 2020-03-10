@@ -16,6 +16,6 @@ describe('Email Parser', () => {
         const url = `${CONFIRM_EMAIL_PATH}/ssshhhhh`;
 
         const emailBody = EmailParser.getEmailContentToString('email-confirm.pug', {url});
-        expect(emailBody).toContain('totooooooooooooooo')
+        expect(emailBody).toContain(url)
     })
 })

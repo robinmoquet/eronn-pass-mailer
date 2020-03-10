@@ -13,7 +13,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm test"
+      "pre-commit": "npm run pre-commit"
     }
   },
   "author": "Robin Moquet",
