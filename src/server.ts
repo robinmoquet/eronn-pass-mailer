@@ -4,7 +4,7 @@ import bodyParser from 'koa-bodyparser';
 import { routes } from './routes';
 
 export default class Server {
-    public readonly port: number;
+    private readonly port: number;
 
     constructor(port: number) {
         this.port = port;
